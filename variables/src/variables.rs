@@ -1,4 +1,5 @@
+// File is marked as a binary in the Cargo.toml file
+
 fn main() {
-    let a:i32 = 10;
-    println!("The value of x is: {}", x);
+    println!("Hello, world!");
 }

@@ -3,4 +3,22 @@ name = "variables"
 version = "0.1.0"
 edition = "2021"
 
+
+[[bin]]
+# Can run this program with "cargo run --bin variables" since it is marked as a binary
+name = "variables"
+path = "src/variables.rs"
+
+[[bin]] # Must declare a bin for each file I want to run
+name = "example1"
+path = "src/example1.rs"
+
+[[bin]]
+name = "example2"
+path = "src/example2.rs"
+
+[[bin]]
+name = "example3"
+path = "src/example3.rs"
+
 [dependencies]
