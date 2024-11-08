@@ -1,0 +1,1 @@
+C:\Users\Nicko\vscodeprojects\rust-practice\modules\target\debug\example1.exe: C:\Users\Nicko\vscodeprojects\rust-practice\modules\src\bin\example1.rs C:\Users\Nicko\vscodeprojects\rust-practice\modules\src\lib.rs

@@ -14,18 +14,18 @@ impl Command {
             // need to bind data in AddText to a variable
             Command::AddText(text) => {
                 format!(
-                    "{{ \
-                        \"command\":\"add_text\", \
-                        \"text\":\"{text}\" \
+                    "{{ \\
+                        \"command\":\"add_text\", \\
+                        \"text\":\"{text}\" \\
                     }}"
                 )
             }
             Command::MoveCursor(x, y) => {
                 format!(
-                    "{{ \
-                        \"command\":\"move_cursor\", \
-                        \"line\":{x}, \
-                        \"column\":{y} \
+                    "{{ \\
+                        \"command\":\"move_cursor\", \\
+                        \"line\":{x}, \\
+                        \"column\":{y} \\
                     }}"
                 )
             },
@@ -33,10 +33,10 @@ impl Command {
             Command::Replace { from, to } => {
                 format!(
                     // / used to remove newlines
-                    "{{ \
-                        \"command\":\"replace\", \ 
-                        \"from\":\"{from}\", \
-                        \"to\":\"{to}\" \
+                    "{{ \\
+                        \"command\":\"replace\", \\  
+                        \"from\":\"{from}\", \\
+                        \"to\":\"{to}\" \\
                     }}"
                 )
             },

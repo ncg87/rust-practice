@@ -29,7 +29,7 @@ fn main() {
     for s in &v {
         println!("{s}");
     }
-    let mut v3 = vec![]
+    let mut v3 = vec![];
     for s in v { // moving all values from v
         v3.push(s)
     }

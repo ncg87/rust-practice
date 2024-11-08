@@ -1,0 +1,19 @@
+[package]
+name = "modules" # name must be unique
+version = "0.1.0" # need to change for each release
+edition = "2021"
+# Required metadata to publish the create
+description = "A simple example of using modules"
+license = "MIT"
+
+[dependencies]
+rand = "0.8.5"
+serde = { version = "1.0", features = ["derive"], optional = true }
+
+# Disabled by default
+[features]
+default = ["serde"]
+serde = ["serde"]
+# These can be enabled/disabled at compile time
+# also can be used to conditionally compile code
+# Can have optional dependencies

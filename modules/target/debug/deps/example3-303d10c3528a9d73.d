@@ -1,0 +1,5 @@
+C:\Users\Nicko\vscodeprojects\rust-practice\modules\target\debug\deps\libexample3-303d10c3528a9d73.rmeta: src\bin\example3.rs
+
+C:\Users\Nicko\vscodeprojects\rust-practice\modules\target\debug\deps\example3-303d10c3528a9d73.d: src\bin\example3.rs
+
+src\bin\example3.rs:

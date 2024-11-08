@@ -17,8 +17,8 @@ impl Command {
 
 fn main() {
     let cmd = Command::Undo;
-    let add = Command::AddText("Hello, world!".to_string());
-    let move = Command::MoveCursor(1, 1); // tuple syntax
+    let add_text = Command::AddText("Hello, world!".to_string());
+    let move_cursor = Command::MoveCursor(1, 1); // tuple syntax
     let replace = Command::Replace { // struct syntax
         from: "Hello".to_string(),
         to: "Goodbye".to_string(),
