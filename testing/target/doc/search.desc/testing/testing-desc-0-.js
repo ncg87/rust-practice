@@ -1,0 +1,1 @@
+searchState.loadedDescShard("testing", 0, "A savings account (Doc comments are used for documentation)\nReturns the argument unchanged.\nCalls <code>U::from(self)</code>.\nCreates a <code>SavingsAccount</code> with a balance of 0")
