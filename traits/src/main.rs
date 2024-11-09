@@ -47,5 +47,41 @@ impl Paint for House {
 }
 
 fn main() {
-    println!("Hello, world!");
+    let car = Car{
+        info: VehicleInfo {
+            make: "Toyota".to_owned(),
+            model: "Prius".to_owned(),
+            year: 2008,
+        },
+    };
+    let house = House{};
+    paint_red(&car);
+    paint_blue(&car);
+    paint_green(&car);
+    paint_red(&house);
+
+    let object = create_paintable_object();
+    object.paint("red".to_string());
+    paint_blue(&object);
+}
+
+// generic function that can be used for any object that implements the Paint trait
+fn paint_red<T: Paint>(object: &T) {
+    object.paint("red".to_string()); // any object passed in will have the paint method
+}
+
+// using impl syntax
+fn paint_blue(object: &impl Paint) { // point so object doesnt go out of scope
+    object.paint("blue".to_string());
+}
+
+// using where clause
+fn paint_green<T>(object: &T) where T: Paint + Park { // a generic where it implements a trait, good for readability and many traits
+    object.paint("green".to_string());
+    object.park();
+}
+
+// traits can we used as return types
+fn create_paintable_object() -> impl Paint {
+    House{}
 }
