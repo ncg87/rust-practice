@@ -18,6 +18,9 @@ fn compare_license_types(software: impl Licensed, software_two: impl Licensed) -
     software.licensing_info() == software_two.licensing_info() // uses implemented licensing_info method of both varuiables
 }
 
+fn main() {
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;

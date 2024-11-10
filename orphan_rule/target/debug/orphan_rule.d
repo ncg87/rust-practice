@@ -1,0 +1,1 @@
+C:\Users\Nicko\vscodeprojects\rust-practice\orphan_rule\target\debug\orphan_rule.exe: C:\Users\Nicko\vscodeprojects\rust-practice\orphan_rule\src\lib.rs C:\Users\Nicko\vscodeprojects\rust-practice\orphan_rule\src\main.rs
