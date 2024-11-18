@@ -1,1 +1,1 @@
-C:\Users\Nicko\vscodeprojects\rust-practice\error_handling\target\debug\error_handling.exe: C:\Users\Nicko\vscodeprojects\rust-practice\error_handling\src\main.rs
+C:\Users\Nicko\vscodeprojects\rust-practice\error_handling\target\debug\error_handling.exe: C:\Users\Nicko\vscodeprojects\rust-practice\error_handling\src\lib.rs C:\Users\Nicko\vscodeprojects\rust-practice\error_handling\src\main.rs
