@@ -42,8 +42,32 @@ fn main () {
     // this is a closure, we can store and pass closures
     
     println!("{}", creds.is_valid());
+    let password_validator = get_password_validator(8, true);
+    let default_creds = get_default_creds(password_validator); // deref coercion is used to convert Box<dyn Fn> to Fn, so box can be used in any generic function
+    println!("{}", default_creds.is_valid());
 }
 
 fn validate_credentials(username: &str, password: &str) -> bool {
     !username.is_empty() && !password.is_empty()
+}
+
+fn get_default_creds<T>(f: T) -> Credentials<T>
+where T: Fn(&str, &str) -> bool {
+    Credentials {
+        username: "guest".to_owned(),
+        password: "password123!".to_owned(),
+        validator: f,
+    }
+}
+
+fn get_password_validator(min_len: usize, special_chars: bool) 
+    -> Box<dyn Fn(&str, &str) -> bool> {
+    if special_chars {  
+        Box::new(move |_: &str, password: &str| {
+            !password.len() >= min_len
+            && password.contains(['!','@','#','$','%','^','&','*'])
+        })
+    } else {
+        Box::new(move |_: &str, password: &str| !password.len() >= min_len)
+    }
 }
